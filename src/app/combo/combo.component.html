@@ -1,0 +1,5 @@
+<form [formGroup]="heroFormGroup" (ngSubmit)="submit()">
+  <select [compareWith]='setSelectedFn' formControlName="hero">
+    <option [ngValue]="hero" *ngFor="let hero of heros">{{hero.name}}</option>
+  </select>
+</form>
